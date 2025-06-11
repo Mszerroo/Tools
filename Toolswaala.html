@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ToolsWaala - Free Online Tools like PDF to Word, Text to Speech, Image Compressor & more. Fast, SEO optimized & mobile-friendly." />
+  <meta name="keywords" content="toolswaala, pdf to word, image compressor, text to speech, online tools, free tools, seo tools, media tools" />
+  <meta name="author" content="ToolsWaala Team" />
+  <title>ToolsWaala - All-in-One Free Online Tools</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header, footer {
+      background: #0059ff;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: #eee;
+      padding: 10px;
+    }
+    nav a {
+      margin: 5px 10px;
+      text-decoration: none;
+      color: #0059ff;
+      font-weight: bold;
+    }
+    section {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    .tool-title {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .adsense {
+      text-align: center;
+      margin: 20px 0;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <h1>ToolsWaala</h1>
+    <p>All-in-One Free Online Tools - Fast & Mobile Friendly</p>
+  </header>
+
+  <nav>
+    <a href="#pdf">PDF to Word</a>
+    <a href="#tts">Text to Speech</a>
+    <a href="#stt">Speech to Text</a>
+    <a href="#img2pdf">Image to PDF</a>
+    <a href="#grammar">Grammar Checker</a>
+    <a href="#paraphrase">Paraphrasing Tool</a>
+    <a href="#plagiarism">Plagiarism Checker</a>
+    <a href="#qr">QR Generator</a>
+    <a href="#compress">Image Compressor</a>
+    <a href="#wordcount">Word Counter</a>
+  </nav>
+
+  <div class="adsense">
+    <!-- AdSense Unit 1 -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <main>
+    <section id="pdf">
+      <h2 class="tool-title">PDF to Word Converter</h2>
+      <p>Convert your PDF files into editable Word documents easily.</p>
+      <!-- Add tool integration or iframe here -->
+    </section>
+
+    <section id="tts">
+      <h2 class="tool-title">Text to Speech Converter</h2>
+      <textarea id="ttsText" rows="4" style="width:100%"></textarea><br>
+      <button onclick="speakText()">Speak</button>
+    </section>
+
+    <section id="stt">
+      <h2 class="tool-title">Speech to Text Converter</h2>
+      <button onclick="startSTT()">Start Speaking</button>
+      <p id="sttResult"></p>
+    </section>
+
+    <section id="img2pdf">
+      <h2 class="tool-title">Image to PDF Converter</h2>
+      <p>Upload images and convert them into a single PDF.</p>
+      <!-- Add image to PDF logic -->
+    </section>
+
+    <section id="grammar">
+      <h2 class="tool-title">Grammar Checker</h2>
+      <p>Check your content for grammar mistakes and readability.</p>
+      <!-- Integrate grammar API or iframe -->
+    </section>
+
+    <section id="paraphrase">
+      <h2 class="tool-title">Paraphrasing Tool</h2>
+      <p>Rewrite your sentences with better clarity and simplicity.</p>
+      <!-- Paraphrasing logic or integration -->
+    </section>
+
+    <section id="plagiarism">
+      <h2 class="tool-title">Plagiarism Checker</h2>
+      <p>Scan and detect plagiarized content from your text.</p>
+      <!-- Plagiarism API or iframe here -->
+    </section>
+
+    <section id="qr">
+      <h2 class="tool-title">QR Code Generator</h2>
+      <input id="qrInput" placeholder="Enter text/URL" style="width:100%" />
+      <button onclick="generateQR()">Generate QR</button>
+      <div id="qrCode"></div>
+    </section>
+
+    <section id="compress">
+      <h2 class="tool-title">Image Compressor</h2>
+      <input type="file" id="imageInput" accept="image/*">
+      <canvas id="canvas" style="display:none;"></canvas>
+      <a id="downloadLink" download="compressed.jpg">Download Compressed Image</a>
+    </section>
+
+    <section id="wordcount">
+      <h2 class="tool-title">Word Counter</h2>
+      <textarea id="wordText" rows="4" style="width:100%"></textarea>
+      <p>Total Words: <span id="wordCount">0</span></p>
+    </section>
+  </main>
+
+  <div class="adsense">
+    <!-- AdSense Unit 2 -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+        data-ad-slot="0987654321"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 ToolsWaala. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function speakText() {
+      const text = document.getElementById("ttsText").value;
+      const utterance = new SpeechSynthesisUtterance(text);
+      speechSynthesis.speak(utterance);
+    }
+
+    function startSTT() {
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.lang = "en-US";
+      recognition.onresult = function(event) {
+        document.getElementById("sttResult").textContent = event.results[0][0].transcript;
+      };
+      recognition.start();
+    }
+
+    function generateQR() {
+      const input = document.getElementById("qrInput").value;
+      document.getElementById("qrCode").innerHTML = '';
+      new QRCode(document.getElementById("qrCode"), input);
+    }
+
+    document.getElementById("imageInput").addEventListener("change", function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const img = new Image();
+        img.onload = function() {
+          const canvas = document.getElementById("canvas");
+          const ctx = canvas.getContext("2d");
+          canvas.width = img.width;
+          canvas.height = img.height;
+          ctx.drawImage(img, 0, 0);
+          canvas.toBlob(function(blob) {
+            const url = URL.createObjectURL(blob);
+            document.getElementById("downloadLink").href = url;
+          }, 'image/jpeg', 0.5);
+        };
+        img.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+
+    document.getElementById("wordText").addEventListener("input", function() {
+      const text = this.value;
+      const words = text.trim().split(/\s+/);
+      document.getElementById("wordCount").textContent = words.filter(Boolean).length;
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+</body>
+
+</html>
