@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ToolsWaala - Free online tools like PDF to Word, Text to Speech, Plagiarism Checker, and more." />
+  <meta name="keywords" content="PDF to Word, Text to Speech, Image Compressor, SEO tools, ToolsWaala" />
+  <meta name="author" content="ToolsWaala" />
+  <title>ToolsWaala - Free Online Tools</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: #007acc;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: #e1e4e8;
+      padding: 0.5rem;
+    }
+    nav a {
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      background: white;
+      border-radius: 5px;
+      color: #007acc;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    section {
+      padding: 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .tool {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    .adsense {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #007acc;
+      color: white;
+    }
+    iframe {
+      width: 100%;
+      height: 200px;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        margin: 0.3rem;
+        padding: 0.5rem;
+      }
+    }
+  </style>
+  <!-- Google AdSense Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>ToolsWaala</h1>
+    <p>Free & Powerful Online Tools in One Place</p>
+  </header>
+
+  <nav>
+    <a href="#pdf2word">PDF to Word</a>
+    <a href="#text2speech">Text to Speech</a>
+    <a href="#speech2text">Speech to Text</a>
+    <a href="#img2pdf">Image to PDF</a>
+    <a href="#grammar">Grammar Checker</a>
+    <a href="#paraphraser">Paraphrasing Tool</a>
+    <a href="#plagiarism">Plagiarism Checker</a>
+    <a href="#qr">QR Code Generator</a>
+    <a href="#compressor">Image Compressor</a>
+    <a href="#wordcounter">Word Counter</a>
+  </nav>
+
+  <section>
+    <!-- AdSense Ad Slot 1 -->
+    <div class="adsense">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXX" data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div id="pdf2word" class="tool">
+      <h2>PDF to Word Converter</h2>
+      <p>Convert your PDF files to editable Word documents easily.</p>
+      <input type="file" /> <!-- Placeholder -->
+    </div>
+
+    <div id="text2speech" class="tool">
+      <h2>Text to Speech</h2>
+      <textarea placeholder="Type your text..."></textarea>
+      <button onclick="speakText()">Speak</button>
+    </div>
+
+    <div id="speech2text" class="tool">
+      <h2>Speech to Text</h2>
+      <button onclick="startDictation()">Start Speaking</button>
+      <p id="output"></p>
+    </div>
+
+    <div id="img2pdf" class="tool">
+      <h2>Image to PDF Converter</h2>
+      <input type="file" multiple />
+    </div>
+
+    <div id="grammar" class="tool">
+      <h2>Grammar Checker</h2>
+      <textarea placeholder="Paste your text..."></textarea>
+    </div>
+
+    <div id="paraphraser" class="tool">
+      <h2>Paraphrasing Tool</h2>
+      <textarea placeholder="Paste your content..."></textarea>
+    </div>
+
+    <div id="plagiarism" class="tool">
+      <h2>Plagiarism Checker</h2>
+      <textarea placeholder="Check for duplicate content..."></textarea>
+    </div>
+
+    <div id="qr" class="tool">
+      <h2>QR Code Generator</h2>
+      <input type="text" placeholder="Enter text or URL" />
+    </div>
+
+    <div id="compressor" class="tool">
+      <h2>Image Compressor</h2>
+      <input type="file" accept="image/*" />
+    </div>
+
+    <div id="wordcounter" class="tool">
+      <h2>Word Counter</h2>
+      <textarea id="wordText" oninput="countWords()"></textarea>
+      <p id="wordCount">Words: 0</p>
+    </div>
+
+    <!-- AdSense Ad Slot 2 -->
+    <div class="adsense">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXX" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 ToolsWaala. All rights reserved.
+  </footer>
+
+  <script>
+    function speakText() {
+      const text = document.querySelector("#text2speech textarea").value;
+      const speech = new SpeechSynthesisUtterance(text);
+      window.speechSynthesis.speak(speech);
+    }
+
+    function startDictation() {
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.onresult = function (e) {
+        document.getElementById("output").innerText = e.results[0][0].transcript;
+      };
+      recognition.start();
+    }
+
+    function countWords() {
+      const text = document.getElementById("wordText").value;
+      const count = text.trim().split(/\s+/).filter(Boolean).length;
+      document.getElementById("wordCount").innerText = `Words: ${count}`;
+    }
+  </script>
+</body>
+
+</html>
